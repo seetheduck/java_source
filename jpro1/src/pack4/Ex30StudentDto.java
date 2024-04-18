@@ -17,8 +17,6 @@ public class Ex30StudentDto {
 		this.jumsu = jumsu;
 		// 생성자를 통해 멤버 필드에 값을 줄 경우에는 setter가 필요없다.
 	}
-
-	
 	
 	public void setHakbun(String hakbun) {
 		this.hakbun = hakbun;
