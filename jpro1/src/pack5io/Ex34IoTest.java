@@ -9,6 +9,7 @@ public class Ex34IoTest {
 
 	public static void main(String[] args) throws Exception {
 		// console과 file을 통한 입력
+		
 		// 1. console을 통한 입력
 		/*
 		InputStreamReader in = new InputStreamReader(System.in);
