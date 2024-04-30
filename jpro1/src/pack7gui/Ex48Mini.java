@@ -139,6 +139,16 @@ public class Ex48Mini extends JFrame implements ActionListener {
 			} else if (gop.isSelected()) {
 				res = nai * nai2;
 			} else if (na.isSelected()) {
+				if(nai == 0) {
+					lblResult.setText("0으로 나누기 불가");
+					num1.requestFocus();
+					return;
+				}
+				else if(nai2 == 0){
+					lblResult.setText("0으로 나누기 불가");
+					num2.requestFocus();
+					return;
+				}
 				res = nai / nai2;
 			}
 
