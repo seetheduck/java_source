@@ -1,8 +1,10 @@
 package pack;
 
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 public class Net4TestClient {
 
@@ -12,9 +14,9 @@ public class Net4TestClient {
 			//System.out.println(ia);
 			//Socket socket = new Socket(ia, 9999);
 			
-			Socket socket = new Socket("127.0.0.1", 9999);	// 서버와 접속
+			Socket socket = new Socket("192.168.0.18", 9999);	// 서버와 접속
 			
-			PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+			PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(),StandardCharsets.UTF_8), true);
 			writer.println("Hi I'm Lee" + "\n");	// 서버로 자료 전송
 			
 			writer.close();
