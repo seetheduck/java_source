@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#con{
+	width:50%;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid yellow;
+	background-color: olive;
+}
+
+.img2{
+	margin-bottom: 3px;
+}
+
+.li1{
+	list-style: none;
+	margin-top: 20px;
+}
+
+#list{
+	float: left;
+}
+
+.img1{
+	margin-left: -14.2%
+}
+
+.li1>a:link{
+	text-decoration: none;
+}

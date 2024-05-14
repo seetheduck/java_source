@@ -13,7 +13,7 @@ System.out.println(irum + " " + jemok + " " + nai + " " + content);
 
 
  %>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +27,6 @@ System.out.println(irum + " " + jemok + " " + nai + " " + content);
 졸리다 <%=nai %><br>
 메일은~ <%=mail %><br>
 이야아아아 <%=content %>
-
 
 </body>
 </html>
