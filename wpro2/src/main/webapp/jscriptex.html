@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+문1) 두 수를 함수로 입력하여 +, -, *, / 한 결과를 함수 내에서 각각 출력하세요.
+아래와 같이 호출하면 결과 출력
+document.write(showOper(8, 2));
+-->
+<script type="text/javascript">
+function showOper(x, y){
+	let plus = x+y;
+	let min = x-y;
+	let gop = x*y;
+	let na = x/y;
+	
+	return `+ : ${plus} - : ${min} * : ${gop} / : ${na}`;
+}
+
+document.write(showOper(8, 2));
+</script>
+<!-- 
+문2) 주어진 배열의 모든 요소의 합을 반환하는 함수를 작성하세요.
+console.log(sumArray([1, 2, 3, 4, 5]));   // 결과 : 15
+console.log(sumArray([10, 20, 30]));    // 결과 : 60
+-->
+<script type="text/javascript">
+function sumArray(array){
+	let res=0;
+	for(let i=0; i<array.length; i++){
+		res += array[i];
+		
+	}
+	return `결과 : ${res}`;
+}
+
+console.log(sumArray([1, 2, 3, 4, 5]));
+console.log(sumArray([10, 20, 30])); 
+</script>
+
+<!-- 
+문3) 주어진 숫자의 팩토리얼을 구하는 함수를 작성하세요. 팩토리얼은 1부터 주어진 숫자까지의 모든 숫자의 곱이다.
+document.write(factorial(5)); // 결과 : 120
+document.write(factorial(7)); // 결과 : 5040
+-->
+<br><br>
+<script type="text/javascript">
+function factorial(x){
+	let res=1;
+	for(let i=1; i<=x; i++){
+		res *= i;
+	}
+	return `결과 : ${res}<br>`;
+}
+
+document.write(factorial(5));
+document.write(factorial(7));
+</script>
+<br>
+<!-- 
+문4) 주어진 문자열에서 특정 문자의 개수를 세는 함수를 작성하세요.
+document.write(countChar("hello", "l"));           // 결과: 2
+document.write(countChar("javascript", "a"));  // 결과 : 2
+-->
+<script type="text/javascript">
+function countChar(x, y){
+	let b = [...x];
+	let cnt = 0;
+	for(let i=0; i<b.length; i++){
+		if(b[i] == y){
+			cnt ++;
+		}
+	}
+	return `결과 : ${cnt}<br>`;
+}
+
+document.write(countChar("hello", "l"));
+document.write(countChar("javascript", "a"));
+
+</script>
+<br>
+<!-- 
+문5) 주어진 문자열 myString에서 숫자를 추출하여 그 합을 반환하는 함수를 작성하세요.
+myString = "1a2b3c4d123"
+document.write(totShow(myString)); // 출력: 16
+힌트 : // 문자열을 개별 문자로 나눔     myString.split("");
+-->
+<script type="text/javascript">
+function totShow(x){
+	let a = [...x];
+	let sum=0;
+	for(let i=0; i<a.length; i++){
+		if(!isNaN(a[i])){
+			sum += parseInt(a[i]);
+		}else continue;
+		
+	}
+	return `출력 : ${sum}<br>`;
+}
+
+myString = "1a2b3c4d123"
+document.write(totShow(myString));
+
+</script>
+
+</body>
+</html>
