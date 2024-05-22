@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+const sum1 = function(a, b){
+	return a + b;
+}
+console.log(`두 수의 합은 ${sum1(3, 4)}`);
+
+const sum2 = (a, b) => a + b;
+console.log(`두 수의 합은 ${sum2(4,5)}`);
+
+//let double1 = (n) => n * 2;
+let double1 = n => n * 2;
+console.log(double1(3));
+
+let sayHi = () => '안녕하세요';
+console.log(sayHi());
+
+//let age = prompt('나이 입력', 22);
+let age = 33;
+let welcome = (age < 30)?() => "안녕":() =>"반가워";
+console.log(welcome());
+
+console.log('----------------------');
+//console.clear();
+
+let sunFunc = (a, b) => {
+	let result = a + b;
+	return result;
+}
+
+console.log(`sunFunc 결과 : ${sunFunc(3, 4)}`);
+
+console.log('----------------------');
+// 반복문 처리 : for
+function func(...para){
+	console.log(para.length, ' ', para);
+	
+	for(let i=0; i<para.length; i++){
+		console.log(para[i]);
+	}
+	
+	for(let s of para){	// 배열은 of 객체는 in
+		console.log(s);
+	}
+	
+	// Array.forEach(callbackFn [,arg])
+	para.forEach(function(obj){	// 콜백함수 obj
+		console.log(obj);
+	});
+	
+	(para.forEach((obj) => console.log(obj)));
+}
+
+func('a', 'b', 'c', 'd');
+
+console.log('---------------------');
+// setInterval : 웹페이지의 특정 부분을 주기적으로 업데이트해줘야 하거나 어떤 API로 부터 변경된 데이터를 주기적으로 받아와야 하는 경우 사용한다
+//setInterval(() => console.log(new Date()), 1000);	// setInterval(수행함수, 시간)
+
+// setTimeout : 어떤 코드를 바로 실행하지 않고 일정 시간 기다린 후 실행해야하는 경우 사용한다
+//setTimeout(() => console.log("2초 후에 실행됨"), 2000);	// setTimeout(수행함수, 시간)
+
+console.log('처리 1');
+//setTimeout(() => console.log('처리 2'), 3000);
+setTimeout(function(){
+	console.log('처리 2');
+}, 3000);
+console.log('처리 3');
+
+// argument로 화살표 함수 사용
+function abcFunc(su, f1, f2){
+	if(su % 2 === 0) f1(); else f2();
+}
+
+abcFunc(2, () => console.log('짝수'), () => console.log('홀수'));
+
+
+function showOk(){
+	console.log('네 동의합니다');
+}
+
+function showCancel(){
+	console.log('아니오');
+}
+
+function ask(question, yes, no){
+	if(confirm(question)){
+		yes();
+	}else no();	
+};
+
+ask("동의합니까?", showOk, showCancel);
+
+</script>
+
+</head>
+<body>
+<h2>화살표 함수</h2>
+화살표 함수(arrow function)를 사용하면 함수 표현식보다 단순하고 간결한 문법으로 함수를 만들 수 있다.
+<br>
+<h2>콜백 함수</h2>
+프로그래밍에서 콜백(callback) 또는 콜백 함수(callback function)는 다른 코드의 인수로서 넘겨주는 실행 가능한 코드를 말한다.
+콜백을 넘겨받는 코드는 이 콜백을 필요에 따라 즉시 실행할 수도 있고 나중에 실행할 수도 있다.
+
+
+</body>
+</html>
