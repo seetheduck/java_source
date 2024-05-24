@@ -11,7 +11,6 @@ System.out.println(irum + " " + id);
 
 String email = request.getParameter("email");
 String nai = request.getParameter("age");
-
 %>
 
 <!DOCTYPE html>
