@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#in').click(function(event){
+	let id = $('#id').val();
+	let pwd = $('#pwd').val();
+	console.log(id + " " + pwd);
+	
+	formCheck(id, pwd);
+	
+	event.preventDefault();
+	});
+});
+
+function formCheck(id, pwd){
+	if(id === "tom" && pwd === "111"){
+		alert("로그인 성공");
+		return;
+	}else {
+		alert("로그인 실패");
+		return;
+	}
+}
+
+</script>
+
+</head>
+<body>
+<form id="frm">
+아이디 : <input type="text" id="id" name="aa"><br>
+비밀번호 : <input type="password" id="pwd" name="aa"><br>
+<input type="submit" id="in" value="로그인">
+</form>
+</body>
+</html>
